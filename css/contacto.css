@@ -1,0 +1,136 @@
+/* Importamos la fuente Poppins de googleapis para nuestra web */
+@import url(https://fonts.googleapis.com/css?family=Poppins);
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.div-menu-top {
+    background-color: black;
+    height: 50px;
+    padding: 0.5vw;
+    z-index: 100;
+    text-align: center;
+    /* position: sticky para hacer que el menú se quede siempre arriba */
+    position: sticky;
+    width: 100%;
+    top: 0;
+}
+
+.div-menu-top nav a{
+    text-decoration:none;
+    color:white;
+}
+          
+.div-menu-top nav li{
+    display:inline-block;
+    width:150px;
+    height:30px;
+    background-color:#000;
+    color: white;
+    text-align:center;
+    position:relative;
+}
+          
+.div-menu-top nav li:hover{
+    background-color: rgb(99, 99, 99);
+    color:rgb(0, 0, 0);
+    border-radius: 5px;
+}
+          
+.div-menu-top nav li> ul{
+    display:none;
+}
+
+.div-menu-top nav li:hover>ul{
+    display:block;
+    position:absolute;
+    top:30px;
+    left:0px;
+    z-index: 3;
+}
+
+.div-principal {
+    margin: 2vw auto;
+    width: 40%;
+    font-size: 1vw;
+    align-items: center;
+}
+
+form {
+    padding-top: 10vw;
+    height: 835px;
+}
+
+fieldset {
+    padding: 1vw;
+    background-color: rgb(35, 116, 131);
+    color: white;
+    border: 2px solid black;
+}
+
+.contacto {
+    text-align: center;
+}
+
+fieldset div {
+    padding: 0.5vw;
+}
+
+#nombre, #apellidos, #correo {
+    margin-left: 1vw;
+}
+
+#correo {
+    width: 300px;
+}
+
+.enviar {
+    text-align: center;
+}
+
+#enviar {
+    width: 25%;
+    font-size: 1vw;
+}
+
+
+
+textarea {
+    width: 500px;
+}
+
+.div-contenedor {
+    background-color: rgb(83, 179, 196);
+}
+
+.recordatorio {
+    font-size: 15px;
+    font-style: italic;
+}
+
+/* Footer */
+
+.div-footer {
+    text-align: center;
+    background-color:rgb(35, 116, 131);
+    margin-top: 2vw;
+    height: 60px;
+}
+
+.div-footer ul li {
+    display: inline-block;
+    padding: 0.9vw 5vw;
+}
+
+.div-footer a {
+    text-decoration: none;
+    color: white;
+}
+
+/*  */
+
+

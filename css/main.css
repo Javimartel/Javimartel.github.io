@@ -1,0 +1,472 @@
+/* Importamos la fuente Poppins de googleapis para nuestra web */
+@import url(https://fonts.googleapis.com/css?family=Poppins);
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.div-menu-top {
+    background-color: black;
+    height: 50px;
+    padding: 0.5vw;
+    z-index: 100;
+    text-align: center;
+    /* position: sticky para hacer que el menú se quede siempre arriba */
+    position: sticky;
+    width: 100%;
+    top: 0;
+}
+
+.div-menu-top nav a{
+    text-decoration:none;
+    color:white;
+}
+          
+.div-menu-top nav li{
+    display:inline-block;
+    width:150px;
+    height:30px;
+    background-color:#000;
+    color: white;
+    text-align:center;
+    position:relative;
+}
+          
+.div-menu-top nav li:hover{
+    background-color: rgb(99, 99, 99);
+    color:rgb(0, 0, 0);
+    border-radius: 5px;
+}
+          
+.div-menu-top nav li> ul{
+    display:none;
+}
+
+.div-menu-top nav li:hover>ul{
+    display:block;
+    position:absolute;
+    top:30px;
+    left:0px;
+    z-index: 3;
+}
+
+.div-principal {
+    display: flex;
+    justify-content: space-between;
+}
+
+.div-inicio {
+    display: inline-block;
+    margin-top: 1vw;
+}
+
+.div-logo {
+    font-size: 40px;
+    font-weight: bold;
+    position: absolute;
+    z-index: 5;
+    padding-left: 2vw;
+}
+
+.div-logo a {
+    text-decoration: none;
+    color:rgb(35, 116, 131);
+    /* Con este text-shadow simulamos un borde sin usar text-stroke ya que este ultimo nos quita parte de la letra, con shadow no pasa eso y se añade detrás */
+    text-shadow: -1px -1px 1px rgb(255, 255, 255), 1px 1px 1px rgb(255, 255, 255), -1px 1px 1px rgb(255, 255, 255), 1px -1px 1px rgb(255, 255, 255);
+}
+
+.div-menu-logo {
+    font-size: 20px;
+    position: absolute;
+    float: right;
+    z-index: 4;
+    margin: 3vw 50vw;
+}
+
+.div-menu-logo nav ul {
+    display: flex;
+    background-color: rgb(35, 116, 131);
+    border: 1px solid white;
+    border-radius: 30px;
+    padding: 5px;
+}
+
+.div-menu-logo nav a {
+    text-decoration:none;
+    color:rgb(255, 255, 255);
+}
+          
+.div-menu-logo nav li{
+    display:inline-block;
+    width: 150px;
+    height: 30px;
+    color: black;
+    text-align:center;
+    position:relative;
+}
+          
+.div-menu-logo nav li:hover{
+    border-radius: 20px;
+    background-color: rgb(41, 155, 175);
+    color:rgb(0, 0, 0);
+}
+          
+.div-menu-logo nav li> ul{
+    display:none;
+}
+
+.div-menu-logo nav li:hover>ul{
+    display:block;
+    position:absolute;
+    top:30px;
+    left:0px;
+}
+
+/* Animación imagenes fondo - slider img */
+
+.slider {
+	margin: auto;
+	overflow: hidden;
+    position: relative;
+}
+
+.slider ul {
+	display: flex;
+	padding: 0;
+	width: 400%;
+	animation: cambio 20s infinite alternate linear;
+}
+
+.slider li {
+	width: 100%;
+	list-style: none;
+}
+
+.slider img {
+    z-index: 1;
+	width: 100%;
+    height: 1000px;
+    /* object-fit: cover para hacer que las imágenes tengan el mismo tamaño si o si */
+    object-fit: cover;
+    /* box-shadow para añadir sombra debajo de las imaneges */
+    box-shadow: 0 0 15px #000000;
+    opacity: 85%;
+}
+
+@keyframes cambio {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+	
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;} 
+}
+
+/*  */
+
+
+.div-contenido-bottom {
+    text-align: center;
+    margin-top: 3vw;
+}
+
+.div-contenido-bottom h2 {
+    color:rgb(35, 116, 131);
+    font-size: 40px;
+}
+
+.div-contenido-bottom p {
+    font-size: 20px;
+}
+
+/* Prestaciones */
+
+.div-prestaciones {
+    margin-top: 2vw;
+    text-align: center;
+}
+
+.div-prestaciones div {
+    display: inline-block;
+}
+
+.div-prestaciones div figure {
+    padding: 1vw;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+/* Ofertas */
+
+.h1-ofertas {
+    text-align: center;
+    color:rgb(35, 116, 131);
+    font-size: 35px;
+    margin: 3vw;
+}
+
+.div-ofertas {
+    margin: 3vw auto;
+    width: 80%;
+    display: flex;
+}
+
+.div-ofertas div {
+    padding: 1vw;
+}
+
+.div-ofertas div figure {
+    text-align: center;
+}
+
+/* Efecto zoom */
+
+.div-ofertas div figure:hover {
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari 3-8 */
+    transform: scale(1.2); 
+  }
+
+.div-ofertas div figure img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.oferta1 {
+    width: 25%;
+}
+
+
+.oferta2 {
+    width: 25%;
+}
+
+
+.oferta3 {
+    width: 25%;
+}
+
+
+.oferta4 {
+    width: 25%;
+}
+
+/* Ventanas emergentes ofertas */
+
+.familia-contenido{
+    background-color: white;
+    width: 600px;
+    padding: 10px 20px;
+    margin: 15% auto;
+    position: relative;
+    border-radius: 20px;
+    font-size: 1vw;
+    text-align: justify;
+}
+
+
+.familia-contenido a {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+.familia-contenido a p {
+    padding: 1vw;
+    font-size: 1.1vw;
+    font-weight: bold;
+}
+
+.familia-contenido h2 {
+    color: rgb(35, 116, 131);
+    text-align: center;
+    padding: 1vw;
+}
+
+.familia1 {
+    background-color: rgba(0,0,0,.8);
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    opacity:0;
+    pointer-events: none;
+    transition: all 1s;
+}
+
+#familia:target {
+    opacity:1;
+    pointer-events: auto;
+}
+
+
+.golf-contenido{
+    background-color: white;
+    width: 600px;
+    padding: 10px 20px;
+    margin: 15% auto;
+    position: relative;
+    border-radius: 20px;
+    font-size: 1vw;
+    text-align: justify;
+}
+
+.golf-contenido a {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+.golf-contenido a p {
+    padding: 1vw;
+    font-size: 1.1vw;
+    font-weight: bold;
+}
+
+.golf-contenido h2 {
+    color: rgb(35, 116, 131);
+    text-align: center;
+    padding: 1vw;
+}
+
+.golf1 {
+    background-color: rgba(0,0,0,.8);
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    opacity:0;
+    pointer-events: none;
+    transition: all 1s;
+}
+
+#golf:target {
+    opacity:1;
+    pointer-events: auto;
+}
+
+.todoinc-contenido{
+    background-color: white;
+    width: 600px;
+    padding: 10px 20px;
+    margin: 15% auto;
+    position: relative;
+    border-radius: 20px;
+    font-size: 1vw;
+    text-align: justify;
+}
+
+.todoinc-contenido a {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+.todoinc-contenido a p {
+    padding: 1vw;
+    font-size: 1.1vw;
+    font-weight: bold;
+}
+
+.todoinc-contenido h2 {
+    color: rgb(35, 116, 131);
+    text-align: center;
+    padding: 1vw;
+}
+
+.todoinc1 {
+    background-color: rgba(0,0,0,.8);
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    opacity:0;
+    pointer-events: none;
+    transition: all 1s;
+}
+
+#todoinc:target {
+    opacity:1;
+    pointer-events: auto;
+}
+
+.soloadultos-contenido{
+    background-color: white;
+    width: 600px;
+    padding: 10px 20px;
+    margin: 15% auto;
+    position: relative;
+    border-radius: 20px;
+    font-size: 1vw;
+    text-align: justify;
+}
+
+.soloadultos-contenido a {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+.soloadultos-contenido a p {
+    padding: 1vw;
+    font-size: 1.1vw;
+    font-weight: bold;
+}
+
+.soloadultos-contenido h2 {
+    color: rgb(35, 116, 131);
+    text-align: center;
+    padding: 1vw;
+}
+
+.soloadultos1 {
+    background-color: rgba(0,0,0,.8);
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    opacity:0;
+    pointer-events: none;
+    transition: all 1s;
+}
+
+#soloadultos:target {
+    opacity:1;
+    pointer-events: auto;
+}
+
+
+
+/* Footer */
+
+.div-footer {
+    text-align: center;
+    background-color:rgb(35, 116, 131);
+    margin-top: 2vw;
+    height: 60px;
+}
+
+.div-footer ul li {
+    display: inline-block;
+    padding: 0.9vw 5vw;
+}
+
+.div-footer a {
+    text-decoration: none;
+    color: white;
+}
+
+/*  */
