@@ -104,7 +104,8 @@ textarea {
 }
 
 .div-contenedor {
-    background-color: rgb(83, 179, 196);
+     /* El último atributo es para la opacidad del fondo */
+    background-color: rgb(83, 179, 196, .5);
 }
 
 .recordatorio {
