@@ -307,6 +307,7 @@
 #familia:target {
     opacity:1;
     pointer-events: auto;
+    z-index: 6;
 }
 
 
@@ -354,6 +355,7 @@
 #golf:target {
     opacity:1;
     pointer-events: auto;
+    z-index: 6;
 }
 
 .todoinc-contenido{
@@ -400,6 +402,7 @@
 #todoinc:target {
     opacity:1;
     pointer-events: auto;
+    z-index: 6;
 }
 
 .soloadultos-contenido{
@@ -446,6 +449,7 @@
 #soloadultos:target {
     opacity:1;
     pointer-events: auto;
+    z-index: 6;
 }
 
 
